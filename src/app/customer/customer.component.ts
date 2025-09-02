@@ -15,5 +15,7 @@ export class CustomerComponent {
 // ];
 
 customers:CustomerModel[]=[];
+showCustomers:boolean=false;
+
 
 }

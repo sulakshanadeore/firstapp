@@ -14,7 +14,7 @@
 </form>
 
 
-<div>
+<div *ngIf="showCustomers">
 
 <table *ngIf="customers.length>0; else emptylist">
     <thead>
@@ -38,6 +38,7 @@
 </ng-template>
 
 </div>
+<div *ngIf="!showCustomers">Customer list is empty</div>
 
 
 
