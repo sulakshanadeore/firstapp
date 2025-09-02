@@ -18,4 +18,10 @@ customers:CustomerModel[]=[];
 showCustomers:boolean=false;
 
 
+button_clicked():void
+{
+  alert("clicked");
+}
+
+
 }
