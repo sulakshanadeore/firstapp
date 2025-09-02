@@ -1,4 +1,7 @@
 <p>user works!</p>
+<p *ngIf="isLoggedIn">You are logged in by entering username and password.</p>
+<p *ngIf="!isLoggedIn">You are not logged in!! Please enter credentials.</p>
+
 
 <h1>UserList</h1>
 <ol>
@@ -22,3 +25,9 @@
         </tr>
     </tbody>
 </table>
+<hr/>
+<ol>
+    <li *ngFor="let f of fruits">
+             {{f}}   
+    </li>
+</ol>

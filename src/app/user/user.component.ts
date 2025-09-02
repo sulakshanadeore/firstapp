@@ -15,4 +15,12 @@ users:SiteUser[]=
   new SiteUser("Jim","jim@123"),
   new SiteUser("John","john@123")
 ];
+
+
+fruits:string[]=["Apple","Banana","Kivi","Lichi","Grapes"];
+
+
+//how to use ngIf structural directive, if means boolean so taken a boolean property
+isLoggedIn:boolean=false;
+
 }
