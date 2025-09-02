@@ -1,0 +1,24 @@
+<p>user works!</p>
+
+<h1>UserList</h1>
+<ol>
+    <li *ngFor="let u of users">
+        {{u.username}} -{{u.password}}
+    </li>
+</ol>
+<hr/>
+<table style="border:1;">
+    <thead>
+        <tr>
+            <td>Username</td>
+            <td>Password</td>
+        </tr>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users">
+<td>{{u.username}}</td>
+<td>{{u.password}}</td>
+        </tr>
+    </tbody>
+</table>
