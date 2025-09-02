@@ -12,4 +12,34 @@
     <input type="text" id="custstate"/><br/>
     </fieldset>
 </form>
+
+
+<div>
+
+<table *ngIf="customers.length>0; else emptylist">
+    <thead>
+        <tr>
+            <td>Customer ID</td>
+            <td>Customer Name</td>
+            <td>Customer City</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cust of customers">
+            <td>{{cust.custid}}</td>
+            <td>{{cust.custname}}</td>
+            <td>{{cust.custcity}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #emptylist>
+    <div>No customers in the list</div>
+</ng-template>
+
+</div>
+
+
+
+
 </div>
