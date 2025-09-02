@@ -21,6 +21,6 @@ fruits:string[]=["Apple","Banana","Kivi","Lichi","Grapes"];
 
 
 //how to use ngIf structural directive, if means boolean so taken a boolean property
-isLoggedIn:boolean=false;
+isLoggedIn:boolean=true;
 
 }

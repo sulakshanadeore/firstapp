@@ -1,8 +1,26 @@
 <p>user works!</p>
+<h1>Simplest If Format Example</h1>
 <p *ngIf="isLoggedIn">You are logged in by entering username and password.</p>
 <p *ngIf="!isLoggedIn">You are not logged in!! Please enter credentials.</p>
 
+<h1>Second Way: if -else</h1>
+<p *ngIf="isLoggedIn; else notLoggedin">Welcome you are logged in!!</p>
+<ng-template #notLoggedin>
+<p>You have not logged in yet!!!!!</p>
+</ng-template>
 
+<h1>Third way--- if then else</h1>
+<div *ngIf="isLoggedIn;then loggedin; else notloggedin"></div>
+<ng-template #loggedin>
+<p>You have logged in successfully!!!!! </p>
+</ng-template>
+
+<ng-template #notloggedin>
+<p>You have not logged in to the app yet!!!!</p>
+
+</ng-template>
+
+<hr/>
 <h1>UserList</h1>
 <ol>
     <li *ngFor="let u of users">
