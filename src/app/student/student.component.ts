@@ -21,6 +21,9 @@ isNri:boolean=true;
 isNonNri:boolean=false;
 nationality:string;
 
+subjects:string[]=['Maths','Science','Geography','History','Electronics','Computer'];
+selectedSubjects:string[];
+
 selectNri()
 {
   this.isNri=true;

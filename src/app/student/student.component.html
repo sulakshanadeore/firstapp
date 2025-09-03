@@ -46,6 +46,11 @@ Yes
 No
 </label>
 <p>You are NRI: {{nationality}}</p>
+<hr/>
+<select multiple [(ngModel)]="selectedSubjects" size="3">
+    <option *ngFor="let s of subjects" [value]="s">{{s}}</option>
+</select>
+<p>You selected subjects: {{selectedSubjects}}</p>
 
 
 
