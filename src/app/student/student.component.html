@@ -1,5 +1,6 @@
-<p>student works!</p>
 
+
+<label>Enter Grade:</label>
 <input [(ngModel)]="studentGrade"  type="text" placeholder="Enter Grade" />
 <div [ngSwitch]="studentGrade">
     <p *ngSwitchCase="'A'">Excellent!!</p>
@@ -8,17 +9,43 @@
     <p *ngSwitchDefault>Invalid Grade</p>
 
 </div>
+<hr/>
 
+<label>Select City:</label>
 <select [(ngModel)]="selectedCity">
     <option value="">---Select City From here---</option>
     <option *ngFor="let c of city" [value]="c">{{c}}</option>
 </select>
 <p>The city: {{selectedCity}}</p>
-
+<hr/>
+<label>Enter Name:</label>
 <input [(ngModel)]="studentName"  type="text" placeholder="Enter name" />
-
-
 <p>You entered {{studentName}}</p>
+<hr/>
+<label>Select Gender:</label>
+<label>
+    <input type="radio" [(ngModel)]="gender" value="Male">Male
+</label>
+
+<label>
+    <input type="radio" [(ngModel)]="gender" value="Female">Female
+</label>
+
+<label>
+    <input type="radio" [(ngModel)]="gender" value="Other">Other
+</label>
+<p>Gender Selected : {{gender}}</p>
+<hr/>
+<label>Select Nationality:</label>
+<label>
+<input type="checkbox" [checked]="isNri" (change)="selectNri()" [(ngModel)]="isNri" name="nation"/>
+Yes
+</label>
+<label>
+<input type="checkbox" [checked]="isNonNri" (change)="selectNonNri()" [(ngModel)]="!isNri" name="nation"/>
+No
+</label>
+<p>You are NRI: {{nationality}}</p>
 
 
 

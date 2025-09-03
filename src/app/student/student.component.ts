@@ -13,4 +13,26 @@ studentName:string='Arti';
 
 city:string[]=['Pune','Mumbai','Hyderabad','Bangalore','Chennai'];
 selectedCity:string;
+
+
+gender:string;
+
+isNri:boolean=true;
+isNonNri:boolean=false;
+nationality:string;
+
+selectNri()
+{
+  this.isNri=true;
+  this.isNonNri=false;
+  this.nationality="Non Indian";
+}
+
+selectNonNri()
+{
+   this.isNri=false;
+  this.isNonNri=true;
+  this.nationality="Indian";
+}
+
 }
