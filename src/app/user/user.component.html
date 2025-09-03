@@ -12,7 +12,14 @@
 <h1>Third way--- if then else</h1>
 <div *ngIf="isLoggedIn;then loggedin; else notloggedin"></div>
 <ng-template #loggedin>
-<p>You have logged in successfully!!!!! </p>
+    <div [ngSwitch]="userrole">
+
+<p *ngSwitchCase="'Admin'">You have logged in successfully as a Admin, so you have full privileges </p>
+<p *ngSwitchCase="'Super Admin'">You have logged in successfully as a Super Admin, so you admin and some extra privileges </p>
+<p *ngSwitchCase="'Client'">You have logged in successfully as a Client, so you have client privileges</p>
+<p *ngSwitchDefault>You have logged in successfully but no special  privileges</p>
+
+</div>
 </ng-template>
 
 <ng-template #notloggedin>

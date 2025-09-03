@@ -1,0 +1,24 @@
+<p>student works!</p>
+
+<input [(ngModel)]="studentGrade"  type="text" placeholder="Enter Grade" />
+<div [ngSwitch]="studentGrade">
+    <p *ngSwitchCase="'A'">Excellent!!</p>
+    <p *ngSwitchCase="'B'">Very Good</p>
+    <p *ngSwitchCase="'C'">Average</p>
+    <p *ngSwitchDefault>Invalid Grade</p>
+
+</div>
+
+<select [(ngModel)]="selectedCity">
+    <option value="">---Select City From here---</option>
+    <option *ngFor="let c of city" [value]="c">{{c}}</option>
+</select>
+<p>The city: {{selectedCity}}</p>
+
+<input [(ngModel)]="studentName"  type="text" placeholder="Enter name" />
+
+
+<p>You entered {{studentName}}</p>
+
+
+
